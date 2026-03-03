@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.0.3
+
+[compare changes](https://github.com/Yizack/eslint-config/compare/v0.0.2...v0.0.3)
+
+### 🩹 Fixes
+
+- Config for nuxt ([e4bd449](https://github.com/Yizack/eslint-config/commit/e4bd449))
+
+### ❤️ Contributors
+
+- Yizack Rangel ([@Yizack](https://github.com/Yizack))
+
 ## v0.0.2
 
 [compare changes](https://github.com/Yizack/eslint-config/compare/v0.0.1...v0.0.2)

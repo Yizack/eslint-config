@@ -1,6 +1,6 @@
 {
   "name": "@yizack/eslint-config",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Yizack's ESLint configuration preset.",
   "type": "module",
   "license": "MIT",
