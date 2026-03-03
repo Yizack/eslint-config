@@ -26,7 +26,7 @@ export const yizack = (options?: YizackConfigOptions): FlatConfigComposer => {
 
   if (options?.vue) {
     globPatterns.push(globs.vue);
-    configs.push(vue());
+    configs.push(vue({ typescript: options.typescript }));
   }
 
   if (options?.imports) {
