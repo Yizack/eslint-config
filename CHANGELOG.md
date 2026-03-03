@@ -1,6 +1,26 @@
 # Changelog
 
 
+## v0.0.4
+
+[compare changes](https://github.com/Yizack/eslint-config/compare/v0.0.3...v0.0.4)
+
+### 🚀 Enhancements
+
+- **vue:** Add more missing rules ([18167c2](https://github.com/Yizack/eslint-config/commit/18167c2))
+
+### 🩹 Fixes
+
+- **vue:** Add vue globals ([6b8c379](https://github.com/Yizack/eslint-config/commit/6b8c379))
+- **nuxt:** Disable vue multi word component names ([3989960](https://github.com/Yizack/eslint-config/commit/3989960))
+- **nuxt:** Use pathe for resolving nuxt file paths ([8ee9ca7](https://github.com/Yizack/eslint-config/commit/8ee9ca7))
+- Append nuxt after vue ([fcbbbf6](https://github.com/Yizack/eslint-config/commit/fcbbbf6))
+- **typescript:** Adjust no-unused-vars ([6aafb90](https://github.com/Yizack/eslint-config/commit/6aafb90))
+
+### ❤️ Contributors
+
+- Yizack Rangel ([@Yizack](https://github.com/Yizack))
+
 ## v0.0.3
 
 [compare changes](https://github.com/Yizack/eslint-config/compare/v0.0.2...v0.0.3)
