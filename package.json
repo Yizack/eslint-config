@@ -1,0 +1,62 @@
+{
+  "name": "@yizack/eslint-config",
+  "version": "0.0.0",
+  "description": "Yizack's ESLint configuration preset.",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "eslint-config"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yizack/eslint-config.git"
+  },
+  "homepage": "https://github.com/Yizack/eslint-config",
+  "author": {
+    "name": "Yizack Rangel",
+    "email": "yizackr@gmail.com",
+    "url": "https://yizack.com"
+  },
+  "main": "./dist/index.mjs",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "default": "./dist/index.mjs"
+    }
+  },
+  "types": "./dist/index.d.mts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "obuild",
+    "prepack": "pnpm build",
+    "release": "pnpm lint && pnpm test && pnpm build && changelogen --release && git push --follow-tags",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "test": "vitest run --reporter=verbose --coverage",
+    "test:types": "tsc --noEmit",
+    "test:watch": "vitest watch"
+  },
+  "peerDependencies": {
+    "eslint": "^9.10.0 || ^10.0.0"
+  },
+  "dependencies": {
+    "@nuxt/eslint-plugin": "^1.15.2",
+    "@stylistic/eslint-plugin": "^5.9.0",
+    "@typescript-eslint/eslint-plugin": "^8.56.1",
+    "@typescript-eslint/parser": "^8.56.1",
+    "eslint-config-flat-gitignore": "^2.2.1",
+    "eslint-flat-config-utils": "^3.0.1",
+    "eslint-plugin-import-x": "^4.16.1",
+    "eslint-plugin-vue": "^10.8.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.3",
+    "changelogen": "^0.6.2",
+    "jiti": "^2.6.1",
+    "obuild": "^0.4.31",
+    "typescript": "^5.9.3"
+  },
+  "packageManager": "pnpm@10.30.3"
+}
