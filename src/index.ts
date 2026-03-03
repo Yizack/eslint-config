@@ -16,19 +16,22 @@ export const yizack = (options?: YizackConfigOptions): FlatConfigComposer => {
     javascript()
   ];
 
+  if (options?.nuxt) {
+    options.vue = true;
+  }
+
   if (options?.typescript) {
     globPatterns.push(globs.typescript);
     c.append(typescript());
   }
 
-  if (options?.nuxt) {
-    c.append(nuxt());
-    options.vue = true;
-  }
-
   if (options?.vue) {
     globPatterns.push(globs.vue);
     c.append(vue({ typescript: options.typescript }));
+  }
+
+  if (options?.nuxt) {
+    c.append(nuxt());
   }
 
   if (options?.imports) {
