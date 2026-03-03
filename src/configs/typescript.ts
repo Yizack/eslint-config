@@ -21,7 +21,13 @@ export const typescript = async (): Promise<ConfigWithExtends> => {
       "@typescript-eslint/no-explicit-any": "error",
       "@typescript-eslint/consistent-type-imports": "error",
       "@typescript-eslint/no-import-type-side-effects": "error",
-      "@typescript-eslint/no-unused-vars": "error"
+      "@typescript-eslint/no-unused-vars": ["error", {
+        args: "after-used",
+        argsIgnorePattern: "^_",
+        ignoreRestSiblings: true,
+        vars: "all",
+        varsIgnorePattern: "^_"
+      }]
     }
   };
 
