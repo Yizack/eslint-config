@@ -59,6 +59,33 @@ export const nuxt = async (): Promise<ConfigWithExtends[]> => {
     });
   }
 
+  const fileRoutes = [...new Set([
+    // These files must have one-word names as they have a special meaning in Nuxt.
+    ...dirs.src.flatMap(layersDir => [
+      join(layersDir, `app.${exts}`),
+      join(layersDir, `error.${exts}`)
+    ]) || [],
+
+    // Layouts and pages are not used directly by users so they can have one-word names.
+    ...(dirs.layouts.map(layoutsDir => join(layoutsDir, `**/*.${exts}`)) || []),
+    ...(dirs.pages.map(pagesDir => join(pagesDir, `**/*.${exts}`)) || []),
+
+    // These files should have multiple words in their names as they are within subdirectories.
+    ...(dirs.components.map(componentsDir => join(componentsDir, "*", `**/*.${exts}`)) || []),
+    // Prefixed components can have one-word names in file
+    ...(dirs.componentsPrefixed.map(componentsDir => join(componentsDir, `**/*.${exts}`)) || [])
+  ])].sort();
+
+  if (fileRoutes.length) {
+    configs.push({
+      name: "nuxt/vue/routes",
+      files: fileRoutes,
+      rules: {
+        "vue/multi-word-component-names": "off"
+      }
+    });
+  }
+
   configs.push({
     name: "nuxt/rules",
     rules: {
