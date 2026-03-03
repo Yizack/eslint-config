@@ -9,6 +9,8 @@ export const yizack = (options?: YizackConfigOptions): FlatConfigComposer => {
   const configs: Awaitable<ConfigWithExtends>[] = [];
   const globPatterns: string[][] = [globs.javascript];
 
+  const c = composer();
+
   const baseConfigs = [
     gitignore(),
     javascript()
@@ -16,25 +18,25 @@ export const yizack = (options?: YizackConfigOptions): FlatConfigComposer => {
 
   if (options?.typescript) {
     globPatterns.push(globs.typescript);
-    configs.push(typescript());
+    c.append(typescript());
   }
 
   if (options?.nuxt) {
-    configs.push(nuxt());
+    c.append(nuxt());
     options.vue = true;
   }
 
   if (options?.vue) {
     globPatterns.push(globs.vue);
-    configs.push(vue({ typescript: options.typescript }));
+    c.append(vue({ typescript: options.typescript }));
   }
 
   if (options?.imports) {
-    configs.push(imports());
+    c.append(imports());
   }
 
   if (options?.stylistic) {
-    configs.push(stylistic());
+    c.append(stylistic());
   }
 
   const flatConfig = [
@@ -43,5 +45,7 @@ export const yizack = (options?: YizackConfigOptions): FlatConfigComposer => {
     ...configs
   ];
 
-  return composer(Promise.all(flatConfig));
+  c.append(...flatConfig);
+
+  return c;
 };
