@@ -24,7 +24,7 @@ export const nuxt = async (): Promise<ConfigWithExtends[]> => {
     { join }
   ] = await Promise.all([
     import("@nuxt/eslint-plugin"),
-    import("node:path")
+    import("pathe")
   ]);
 
   const fileSingleRoot = [
