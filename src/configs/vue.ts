@@ -24,6 +24,22 @@ export const vue = async (options?: {
         extraFileExtensions: [".vue"],
         parser: options?.typescript? await import("@typescript-eslint/parser").then(mod => mod.default) : null,
         sourceType: "module"
+      },
+      globals: {
+        computed: "readonly",
+        defineEmits: "readonly",
+        defineExpose: "readonly",
+        defineProps: "readonly",
+        onMounted: "readonly",
+        onUnmounted: "readonly",
+        reactive: "readonly",
+        ref: "readonly",
+        shallowReactive: "readonly",
+        shallowRef: "readonly",
+        toRef: "readonly",
+        toRefs: "readonly",
+        watch: "readonly",
+        watchEffect: "readonly"
       }
     },
     processor: pluginVue.processors[".vue"],
