@@ -26,7 +26,7 @@ export const vue = async (options?: {
         sourceType: "module"
       }
     },
-    processor: pluginVue.processors['.vue'],
+    processor: pluginVue.processors[".vue"],
     rules: {
       ...pluginVue.configs.base.rules,
       ...pluginVue.configs["flat/recommended"].map(c => c.rules).reduce((acc, c) => ({ ...acc, ...c }), {}),
