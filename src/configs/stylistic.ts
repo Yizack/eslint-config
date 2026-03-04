@@ -1,7 +1,7 @@
 import type { ConfigWithExtends } from "eslint-flat-config-utils";
 
 export const stylistic = async (): Promise<ConfigWithExtends> => {
-  const pluginStylistic = await import("@stylistic/eslint-plugin").then(mod => mod.default);
+  const { default: pluginStylistic } = await import("@stylistic/eslint-plugin");
 
   const config: ConfigWithExtends = {
     plugins: {

@@ -4,11 +4,11 @@ export const vue = async (options?: {
   typescript?: boolean;
 }): Promise<ConfigWithExtends> => {
   const [
-    pluginVue,
-    parserVue
+    { default: pluginVue },
+    { default: parserVue }
   ] = await Promise.all([
-    import("eslint-plugin-vue").then(mod => mod.default),
-    import("vue-eslint-parser").then(mod => mod.default)
+    import("eslint-plugin-vue"),
+    import("vue-eslint-parser")
   ]);
 
   const config: ConfigWithExtends = {

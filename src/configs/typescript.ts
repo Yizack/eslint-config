@@ -2,11 +2,11 @@ import type { ConfigWithExtends } from "eslint-flat-config-utils";
 
 export const typescript = async (): Promise<ConfigWithExtends> => {
   const [
-    parserTypescript,
-    pluginTypescript
+    { default: parserTypescript },
+    { default: pluginTypescript }
   ] = await Promise.all([
-    import("@typescript-eslint/parser").then(mod => mod.default),
-    import("@typescript-eslint/eslint-plugin").then(mod => mod.default)
+    import("@typescript-eslint/parser"),
+    import("@typescript-eslint/eslint-plugin")
   ]);
 
   const config: ConfigWithExtends = {

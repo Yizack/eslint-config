@@ -1,7 +1,7 @@
 import type { ConfigWithExtends } from "eslint-flat-config-utils";
 
 export const imports = async (): Promise<ConfigWithExtends> => {
-  const pluginImport = await import("eslint-plugin-import-x").then(mod => mod.default);
+  const { default: pluginImport } = await import("eslint-plugin-import-x");
 
   const config: ConfigWithExtends = {
     plugins: {
