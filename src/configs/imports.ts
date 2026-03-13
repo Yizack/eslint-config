@@ -5,7 +5,6 @@ export const imports = async (): Promise<ConfigWithExtends> => {
 
   const config: ConfigWithExtends = {
     plugins: {
-      // @ts-expect-error import plugin
       import: pluginImport
     },
     rules: {
