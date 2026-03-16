@@ -18,6 +18,7 @@ const dirs = {
 
 const exts = "{js,ts,jsx,tsx,vue}";
 
+// Inspired by https://github.com/nuxt/eslint/blob/main/packages/eslint-config/src/configs/nuxt.ts
 export const nuxt = async (): Promise<ConfigWithExtends[]> => {
   const [
     { default: pluginNuxt },
@@ -36,6 +37,7 @@ export const nuxt = async (): Promise<ConfigWithExtends[]> => {
   const configs: ConfigWithExtends[] = [];
 
   configs.push({
+    name: "nuxt/setup",
     plugins: {
       nuxt: pluginNuxt
     },
@@ -43,9 +45,6 @@ export const nuxt = async (): Promise<ConfigWithExtends[]> => {
       globals: {
         $fetch: "readonly"
       }
-    },
-    rules: {
-      "nuxt/prefer-import-meta": "error"
     }
   });
 
