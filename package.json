@@ -44,8 +44,8 @@
   "dependencies": {
     "@nuxt/eslint-plugin": "^1.15.2",
     "@stylistic/eslint-plugin": "^5.10.0",
-    "@typescript-eslint/eslint-plugin": "^8.57.0",
-    "@typescript-eslint/parser": "^8.57.0",
+    "@typescript-eslint/eslint-plugin": "^8.57.1",
+    "@typescript-eslint/parser": "^8.57.1",
     "eslint-config-flat-gitignore": "^2.2.1",
     "eslint-flat-config-utils": "^3.0.2",
     "eslint-plugin-import-x": "^4.16.2",
