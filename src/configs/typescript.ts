@@ -19,15 +19,19 @@ export const typescript = async (): Promise<ConfigWithExtends> => {
     },
     rules: {
       "@typescript-eslint/no-explicit-any": "error",
-      "@typescript-eslint/consistent-type-imports": "error",
-      "@typescript-eslint/no-import-type-side-effects": "error",
+      "@typescript-eslint/consistent-type-imports": ["error", {
+        disallowTypeAnnotations: false,
+        prefer: "type-imports"
+      }],
       "@typescript-eslint/no-unused-vars": ["error", {
         args: "after-used",
         argsIgnorePattern: "^_",
         ignoreRestSiblings: true,
         vars: "all",
         varsIgnorePattern: "^_"
-      }]
+      }],
+      "@typescript-eslint/no-import-type-side-effects": "error",
+      "@typescript-eslint/no-empty-object-type": "error"
     }
   };
 
