@@ -1,6 +1,28 @@
 # Changelog
 
 
+## v0.0.5
+
+[compare changes](https://github.com/Yizack/eslint-config/compare/v0.0.4...v0.0.5)
+
+### 🚀 Enhancements
+
+- Add more ts and js rules ([e6faa92](https://github.com/Yizack/eslint-config/commit/e6faa92))
+
+### 📖 Documentation
+
+- Add readme info ([b4fe423](https://github.com/Yizack/eslint-config/commit/b4fe423))
+
+### 🏡 Chore
+
+- Add renovate ([f071084](https://github.com/Yizack/eslint-config/commit/f071084))
+- Destructure default from dynamic imports ([d95b17c](https://github.com/Yizack/eslint-config/commit/d95b17c))
+- Remove duplicate Nuxt rule block ([a913de9](https://github.com/Yizack/eslint-config/commit/a913de9))
+
+### ❤️ Contributors
+
+- Yizack Rangel <yizackr@gmail.com>
+
 ## v0.0.4
 
 [compare changes](https://github.com/Yizack/eslint-config/compare/v0.0.3...v0.0.4)
