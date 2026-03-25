@@ -16,7 +16,8 @@
     "module": "Preserve",
     "noEmit": true,
     "moduleResolution": "Bundler",
-    "declaration": true
+    "declaration": true,
+    "types": ["node"]
   },
   "include": [
     "src",
