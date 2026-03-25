@@ -60,7 +60,7 @@
     "changelogen": "^0.6.2",
     "jiti": "^2.6.1",
     "obuild": "^0.4.32",
-    "typescript": "^5.9.3"
+    "typescript": "^6.0.2"
   },
   "packageManager": "pnpm@10.33.0"
 }
