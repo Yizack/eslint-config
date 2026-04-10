@@ -56,7 +56,7 @@
     "vue-eslint-parser": "^10.4.0"
   },
   "devDependencies": {
-    "@types/node": "^25.5.2",
+    "@types/node": "^25.6.0",
     "changelogen": "^0.6.2",
     "jiti": "^2.6.1",
     "obuild": "^0.4.33",
