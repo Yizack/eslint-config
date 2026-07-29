@@ -1,6 +1,27 @@
 # Changelog
 
 
+## v0.0.6
+
+[compare changes](https://github.com/Yizack/eslint-config/compare/v0.0.5...v0.0.6)
+
+### 🚀 Enhancements
+
+- Include `@stylistic/space-infix-ops` rule ([5072916](https://github.com/Yizack/eslint-config/commit/5072916))
+
+### 🏡 Chore
+
+- **renovate:** Set npm minimumReleaseAge to 1 day ([f01a567](https://github.com/Yizack/eslint-config/commit/f01a567))
+
+### 🤖 CI
+
+- **release:** Automate github releases ([05485ff](https://github.com/Yizack/eslint-config/commit/05485ff))
+- Prefer node --run for running scripts ([0355879](https://github.com/Yizack/eslint-config/commit/0355879))
+
+### ❤️ Contributors
+
+- Yizack Rangel ([@Yizack](https://github.com/Yizack))
+
 ## v0.0.5
 
 [compare changes](https://github.com/Yizack/eslint-config/compare/v0.0.4...v0.0.5)
