@@ -30,15 +30,15 @@
   ],
   "scripts": {
     "build": "obuild",
-    "prepack": "pnpm build",
-    "release": "pnpm checks && changelogen --release --push --no-github",
+    "prepack": "node --run build",
+    "release": "node --run checks && changelogen --release --push --no-github",
     "release:github": "changelogen gh release",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "test": "vitest run --reporter=verbose --coverage",
     "test:types": "tsc --noEmit",
     "test:watch": "vitest watch",
-    "checks": "pnpm lint && pnpm test:types && pnpm build"
+    "checks": "node --run lint && node --run test:types && node --run build"
   },
   "peerDependencies": {
     "eslint": "^9.10.0 || ^10.0.0"
