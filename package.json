@@ -31,12 +31,14 @@
   "scripts": {
     "build": "obuild",
     "prepack": "pnpm build",
-    "release": "pnpm lint && pnpm build && changelogen --release && git push --follow-tags",
+    "release": "pnpm checks && changelogen --release --push --no-github",
+    "release:github": "changelogen gh release",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "test": "vitest run --reporter=verbose --coverage",
     "test:types": "tsc --noEmit",
-    "test:watch": "vitest watch"
+    "test:watch": "vitest watch",
+    "checks": "pnpm lint && pnpm test:types && pnpm build"
   },
   "peerDependencies": {
     "eslint": "^9.10.0 || ^10.0.0"
