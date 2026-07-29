@@ -22,7 +22,7 @@ export const vue = async (options?: {
           jsx: true
         },
         extraFileExtensions: [".vue"],
-        parser: options?.typescript? await import("@typescript-eslint/parser").then(mod => mod.default) : null,
+        parser: options?.typescript ? await import("@typescript-eslint/parser").then(mod => mod.default) : null,
         sourceType: "module"
       },
       globals: {

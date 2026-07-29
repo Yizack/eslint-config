@@ -35,7 +35,8 @@ export const stylistic = async (): Promise<ConfigWithExtends> => {
       "@stylistic/no-multiple-empty-lines": ["error", { max: 1 }],
       "@stylistic/quote-props": ["error", "consistent-as-needed"],
       "@stylistic/arrow-parens": ["error", "as-needed", { requireForBlockBody: true }],
-      "@stylistic/function-call-spacing": ["error", "never"]
+      "@stylistic/function-call-spacing": ["error", "never"],
+      "@stylistic/space-infix-ops": "error"
     }
   };
   return config;
