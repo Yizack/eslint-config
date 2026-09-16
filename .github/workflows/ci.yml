@@ -30,14 +30,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v7
-      - run: corepack enable
-      - uses: actions/setup-node@v7
-        with:
-          node-version: lts/*
-          cache: pnpm
+      - uses: pnpm/setup@v2
 
-      - name: 📦 Install dependencies
-        run: pnpm install
+        with:
+          runtime: node@lts
+          cache: true
 
       - name: 🔎 Lint
         run: node --run lint
@@ -47,14 +44,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v7
-      - run: corepack enable
-      - uses: actions/setup-node@v7
-        with:
-          node-version: lts/*
-          cache: pnpm
+      - uses: pnpm/setup@v2
 
-      - name: 📦 Install dependencies
-        run: pnpm install
+        with:
+          runtime: node@lts
+          cache: true
 
     # - name: 🧪 Run test suite
     #   run: node --run test
