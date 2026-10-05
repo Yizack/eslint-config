@@ -53,16 +53,16 @@
     "eslint-flat-config-utils": "^3.2.0",
     "eslint-plugin-import-x": "^4.17.1",
     "eslint-plugin-vue": "^10.11.1",
-    "globals": "^17.12.0",
+    "globals": "^17.13.0",
     "pathe": "^2.0.3",
     "vue-eslint-parser": "^10.4.1"
   },
   "devDependencies": {
-    "@types/node": "^25.9.8",
+    "@types/node": "^25.9.9",
     "changelogen": "^0.6.2",
     "jiti": "^2.7.0",
-    "obuild": "^0.4.42",
+    "obuild": "^0.4.43",
     "typescript": "^6.0.3"
   },
-  "packageManager": "pnpm@12.8.1"
+  "packageManager": "pnpm@12.9.1"
 }
