@@ -64,5 +64,5 @@
     "obuild": "^0.4.45",
     "typescript": "^6.0.3"
   },
-  "packageManager": "pnpm@12.11.2"
+  "packageManager": "pnpm@12.14.0"
 }
